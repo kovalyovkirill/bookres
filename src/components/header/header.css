@@ -1,0 +1,16 @@
+.mainHead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  background: orangered;
+  color: white;
+  width: 100%;
+
+  .logo {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: white;
+  }
+}
