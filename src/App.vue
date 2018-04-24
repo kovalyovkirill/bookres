@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import Header from '@/components/header/Header.vue'
 
 export default {
@@ -13,6 +14,12 @@ export default {
     Header,
   },
   name: 'App',
+  methods: {
+    ...mapActions([ 'getBooks' ]),
+  },
+  created () {
+    this.getBooks()
+  },
 }
 </script>
 
