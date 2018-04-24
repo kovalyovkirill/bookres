@@ -1,0 +1,35 @@
+.marketWrapper {
+  background: grey;
+}
+
+.booksWrapper {
+  max-width: 1000px;
+  width: 85%;
+  margin: 120px auto 40px auto;
+  position: relative;
+
+  .booksGrid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: -15px;
+
+    .bookItem {
+      width: 33.333%;
+      position: relative;
+
+      @media (width <= 1200px) {
+        width: 50%;
+      }
+
+      .bookItemWr {
+        margin: 15px;
+      }
+    }
+  }
+}
+
+.bookCard {
+  background: white;
+  padding: 15px;
+}

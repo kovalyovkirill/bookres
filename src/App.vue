@@ -23,9 +23,4 @@ export default {
 }
 </script>
 
-<style lang="postcss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  padding-top: 80px;
-}
-</style>
+<style src="./styles/global.scss" lang="postcss"></style>
