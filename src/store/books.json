@@ -8,7 +8,8 @@
       "title": "Малый бизнес. Большая игра",
       "thumbnail": "http://books.google.com/books/content?id=AHE3AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 638.5,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@
       "title": "Бизнес. Перезагрузка. Как вывести из крутого пике бизнес, который, казалось бы, спасти уже невозможно",
       "thumbnail": "http://books.google.com/books/content?id=-AoEG85D0KQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 317.54,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 3,
@@ -29,7 +31,8 @@
       "title": "JavaScript в примерах и задачах",
       "thumbnail": "http://books.google.com/books/content?id=iYQ7DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 459.21,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 4,
@@ -39,7 +42,8 @@
       "title": "JavaScript для детей",
       "thumbnail": "http://books.google.com/books/content?id=rdCbDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 423.74,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 5,
@@ -49,7 +53,8 @@
       "title": "JavaScript: The Good Parts",
       "thumbnail": "http://books.google.com/books/content?id=PXa2bby0oQ0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 892.07,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 6,
@@ -59,7 +64,8 @@
       "title": "Effective JavaScript",
       "thumbnail": "http://books.google.com/books/content?id=nBuA0hmspdMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 1702.44,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 7,
@@ -69,7 +75,8 @@
       "title": "Современный сайт на РНР и JavaScript (+CD)",
       "thumbnail": "http://books.google.com/books/content?id=eZEzE3cDp9gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 52.04,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 8,
@@ -79,7 +86,8 @@
       "title": "Python для детей и родителей. Играй и программируй",
       "thumbnail": "http://books.google.com/books/content?id=ElLHDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 487.3,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 9,
@@ -89,7 +97,8 @@
       "title": "Python",
       "thumbnail": "http://books.google.com/books/content?id=KUjaWG-_V2EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 262.31,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 10,
@@ -99,7 +108,8 @@
       "title": "Python на практике. Создание качественных программ с использованием параллелизма, библиотек и паттернов",
       "thumbnail": "http://books.google.com/books/content?id=jW39DQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 512.95,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 11,
@@ -110,7 +120,8 @@
       "title": "Автостопом по Python",
       "thumbnail": "http://books.google.com/books/content?id=ZfcxDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 837.92,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 12,
@@ -120,7 +131,8 @@
       "title": "PYTHON",
       "thumbnail": "http://books.google.com/books/content?id=lM9QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 276.33,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 13,
@@ -130,7 +142,8 @@
       "title": "Python Machine Learning",
       "thumbnail": "http://books.google.com/books/content?id=GOVOCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 2362.35,
-      "status": 1
+      "status": 1,
+      "count": 1
     },
     {
       "id": 14,
@@ -140,7 +153,8 @@
       "title": "Text Analytics with Python",
       "thumbnail": "http://books.google.com/books/content?id=IimgDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "price": 2791.78,
-      "status": 1
+      "status": 1,
+      "count": 1
     }
   ]
 }

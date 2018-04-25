@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { BOOK_STATUSES } from '@/store/gettres'
 
 export default {
@@ -34,8 +35,11 @@ export default {
     isMarket () { return this.status === BOOK_STATUSES.MARKET },
   },
   methods: {
+    ...mapActions([ 'addToCart' ]),
     handleClick () {
       console.log(this.id)//eslint-disable-line
+      if (!this.isMarket) return
+      this.addToCart({ id: this.id })
     },
   },
 }
