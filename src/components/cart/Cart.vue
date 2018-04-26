@@ -1,29 +1,18 @@
 <template>
   <div class="contentWrapper">
-    <div v-if="cartCount === 0">
-      В корзине пока пусто
-    </div>
-    <template v-else>
-      <CartList/>
-    </template>
+    <CartList/>
+    <CartForm/>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 import CartList from '@/components/cart/list/CartList.vue'
+import CartForm from '@/components/cart/form/CartForm.vue'
 
 export default {
   components: {
     CartList,
-  },
-  computed: {
-    ...mapGetters({ cartCount: 'getCartCount' }),
+    CartForm,
   },
 }
 </script>
-
-<style scoped>
-
-</style>

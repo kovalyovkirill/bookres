@@ -1,12 +1,14 @@
 <template>
 <header class="mainHead">
-  <span class="logo"/>
-  <span>Bookres</span>
+  <div class="logo"/>
+  <span class="logoDescription">Bookres</span>
   <nav>
     <router-link to="/market">Каталог</router-link>
     <router-link to="/cart">Корзина</router-link>
   </nav>
-  <div class="cartCount">{{ cartCount }}</div>
+  <router-link to="/cart" class="cartCount">
+    <div>{{ cartCount }}</div>
+  </router-link>
 </header>
 </template>
 

@@ -5,8 +5,8 @@
       <div>Цена: {{ price }}</div>
       <div>Название: {{ name }}</div>
       <div>Авторы: {{ authorsList }}</div>
-      <button @click="handleClick">
-        <span v-if="isMarket">Добавить в конрзину</span>
+      <button :class="{ cart: !isMarket }" @click="handleClick">
+        <span v-if="isMarket">Добавить в корзину</span>
         <span v-else>В корзине</span>
       </button>
     </div>

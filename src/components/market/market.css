@@ -1,3 +1,5 @@
+@import url('vars.scss');
+
 .marketWrapper {
   background: grey;
 }
@@ -15,11 +17,11 @@
     margin: -15px;
 
     .bookItem {
-      width: 33.333%;
+      width: 25%;
       position: relative;
 
-      @media (width <= 1200px) {
-        width: 50%;
+      @media (width <= 1400px) {
+        width: 33.333%;
       }
 
       .bookItemWr {
@@ -32,4 +34,36 @@
 .bookCard {
   background: white;
   padding: 15px;
+  position: relative;
+
+  img {
+    height: 180px;
+    width: auto;
+  }
+
+  > div {
+    height: 40px;
+    font-size: 15px;
+    line-height: 20px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  button {
+    padding: 10px 15px;
+    background: transparent;
+    border: 2px solid #d3d3d3;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &.cart {
+      background: $secondaryButton;
+      color: white;
+      cursor: default;
+    }
+  }
 }

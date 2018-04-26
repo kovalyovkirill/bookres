@@ -1,0 +1,17 @@
+.cartList {
+  .totalPrice {
+    text-align: right;
+  }
+}
+
+.purchaseForm {
+
+  .formField {
+    margin: 15px 0;
+
+    label {
+      display: inline-block;
+      min-width: 100px;
+    }
+  }
+}

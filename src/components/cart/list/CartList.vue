@@ -1,5 +1,8 @@
 <template>
-  <table>
+  <div v-if="cartCount === 0">
+    В корзине пока пусто
+  </div>
+  <table class="cartList" v-else>
     <CartListHead/>
     <tbody>
       <CartListRow
@@ -14,7 +17,7 @@
         :count="item.count"
       />
     <tr>
-      <td rowspan="4">
+      <td class="totalPrice" colspan="3">
         <div>Всего</div>
         <div>{{ totalPrice }}</div>
       </td>
@@ -35,11 +38,14 @@ export default {
     CartListRow,
   },
   computed: {
-    ...mapGetters({ cartList: 'getCartBooks', totalPrice: 'getTotalPrice', checkList: 'getCartCheckedList' }),
+    ...mapGetters({
+      cartList: 'getCartBooks',
+      totalPrice: 'getTotalPrice',
+      checkList: 'getCartCheckedList',
+      cartCount: 'getCartCount',
+    }),
   },
 }
 </script>
 
-<style scoped>
-
-</style>
+<style src="@/components/cart/cart.css" lang="postcss" scoped></style>
