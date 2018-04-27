@@ -2,7 +2,7 @@
   <div class="bookItem">
     <div class="bookItemWr bookCard">
       <img :src="thumbnailUrl" alt="">
-      <div>Цена: {{ price }}</div>
+      <div>Цена: <PriceFormat :value="price" /></div>
       <div>Название: {{ name }}</div>
       <div>Авторы: {{ authorsList }}</div>
       <button :class="{ cart: !isMarket }" @click="handleClick">

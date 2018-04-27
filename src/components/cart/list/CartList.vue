@@ -17,9 +17,8 @@
         :count="item.count"
       />
     <tr>
-      <td class="totalPrice" colspan="3">
-        <div>Всего</div>
-        <div>{{ totalPrice }}</div>
+      <td class="totalPrice" colspan="4">
+        <div><PriceFormat :value="totalPrice"/></div>
       </td>
     </tr>
     </tbody>

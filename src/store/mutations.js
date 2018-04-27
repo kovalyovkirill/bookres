@@ -9,6 +9,9 @@ export default {
   addToCheckedList (state, { id }) {
     state.checkedList.push(id)
   },
+  removeFromCheckedList (state, { id }) {
+    state.checkedList = state.checkedList.filter(item => item !== id)
+  },
   replaceBooks (state, { books }) {
     state.booksList = books
   },

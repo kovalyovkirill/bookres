@@ -1,22 +1,29 @@
 <template>
-  <tr>
+  <tr @click.prevent="handleChange">
     <td>
-      <img :src="thumbnailUrl" :alt="name">
-      <span>{{ name }}</span>
-      <span>{{ authorsList }}</span>
-      <button @click="handleRemove">Удалить</button>
+      <input type="checkbox" v-model="isChecked">
     </td>
-    <td>
+    <td class="bookInfo">
+      <img :src="thumbnailUrl" :alt="name">
+      <div>
+        <span>{{ name }}</span>
+        <span>{{ authorsList }}</span>
+      </div>
+      <div class="removeWr">
+        <button class="removeButton" @click="handleRemove"/>
+      </div>
+    </td>
+    <td class="count">
       <button @click="handleIncrease">+</button>
       <span>{{ count }}</span>
       <button @click="handleDecreace" :disabled="isDecreaceDisabled">-</button>
     </td>
-    <td><span>{{ price }}</span></td>
+    <td class="price"><PriceFormat :value="price"/></td>
   </tr>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   props: {
@@ -29,6 +36,15 @@ export default {
     count: { type: Number, required: true },
   },
   computed: {
+    ...mapGetters({ currentValue: 'getCartCheckedById' }),
+    isChecked: {
+      get () {
+        return this.currentValue(this.id)
+      },
+      set () {
+        this.handleChange()
+      },
+    },
     authorsList () {
       const { authors } = this
       if (authors.length === 1) return authors[0]
@@ -37,7 +53,7 @@ export default {
     isDecreaceDisabled () { return this.count === 1 },
   },
   methods: {
-    ...mapActions([ 'removeFromCart', 'increaseCount', 'decreaseCount' ]),
+    ...mapActions([ 'removeFromCart', 'increaseCount', 'decreaseCount', 'removeFromCheckedList', 'addToCheckedList' ]),
     handleRemove () {
       this.removeFromCart({ id: this.id })
     },
@@ -47,6 +63,15 @@ export default {
     handleDecreace () {
       if (this.count === 1) return
       this.decreaseCount({ id: this.id })
+    },
+    handleChange () {
+      const payload = { id: this.id }
+
+      if (this.isChecked) {
+        this.removeFromCheckedList(payload)
+      } else {
+        this.addToCheckedList(payload)
+      }
     },
   },
 }

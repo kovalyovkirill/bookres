@@ -7,9 +7,13 @@ import router from './router'
 import Vuex from 'vuex'
 import store from './store'
 
+import PriceFormat from '@/components/commonComponents/PriceFormat.vue'
+
 Vue.config.productionTip = false
 
 Vue.use(Vuex)
+
+Vue.component('PriceFormat', PriceFormat)
 
 /* eslint-disable no-new */
 new Vue({

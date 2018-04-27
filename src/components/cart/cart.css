@@ -1,6 +1,84 @@
+@import url('vars.scss');
+
 .cartList {
-  .totalPrice {
+  border-collapse: collapse;
+  border: 1px solid color($mainBg blend(black 8%));
+  width: 100%;
+
+  thead {
+    tr {
+      th {
+        text-align: left;
+        padding: 10px 15px;
+        background: color($mainBg blend(black 10%));
+        font-weight: 600;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      cursor: pointer;
+      
+      td {
+        padding: 10px;
+        vertical-align: top;
+        background: color($mainBg blend(white 50%));
+        position: relative;
+        border-bottom: 1px solid color($mainBg blend(black 8%));
+      }
+    }
+  }
+
+  .bookInfo {
+
+    img {
+      height: 60px;
+      width: auto;
+      display: inline-block;
+      float: left;
+      padding-right: 10px;
+    }
+
+    .removeWr {
+      position: relative;
+      height: 40px;
+      .removeButton {
+        display: block;
+        height: 30px;
+        width: 30px;
+        background-size: cover;
+        background-position: center;
+        background-image: url('~assets/icons/delete.png');
+        background-color: transparent;
+        border: 1px solid color($mainBg blend(black 8%));
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 5px;
+        left: 65px;
+
+        &:hover {
+          background-color: color($mainBg blend(white 70%));
+        }
+      }
+    }
+  }
+
+  .count {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .totalPrice,
+  .price {
     text-align: right;
+    font-weight: bolder;
+    vertical-align: middle;
+  }
+
+  .totalPrice {
+    font-size: 18px;
   }
 }
 

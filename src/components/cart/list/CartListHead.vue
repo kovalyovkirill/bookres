@@ -1,7 +1,7 @@
 <template>
   <thead>
     <tr>
-      <th>Название</th>
+      <th colspan="2">Название</th>
       <th>Колличество</th>
       <th>Цена</th>
     </tr>

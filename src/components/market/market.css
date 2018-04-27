@@ -1,13 +1,12 @@
 @import url('vars.scss');
 
 .marketWrapper {
-  background: grey;
+  padding: 40px 0;
 }
 
 .booksWrapper {
-  max-width: 1000px;
-  width: 85%;
-  margin: 120px auto 40px auto;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
 
   .booksGrid {
@@ -60,9 +59,13 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
 
+    &:hover,
     &.cart {
       background: $secondaryButton;
       color: white;
+    }
+
+    &.cart {
       cursor: default;
     }
   }

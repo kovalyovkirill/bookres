@@ -20,6 +20,9 @@ export default {
   addToCheckedList ({ commit }, { id }) {
     commit('addToCheckedList', { id })
   },
+  removeFromCheckedList ({ commit }, { id }) {
+    commit('removeFromCheckedList', { id })
+  },
   increaseCount ({ commit }, { id }) {
     commit('increaseCount', { id })
   },

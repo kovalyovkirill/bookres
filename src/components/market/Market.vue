@@ -1,19 +1,20 @@
 <template>
   <div class="marketWrapper">
-    <h1>Supermarket</h1>
     <h2 v-if="isBooksPending">Загружаем книги...</h2>
-    <div v-else class="booksWrapper">
-      <div class="booksGrid">
-        <BookCard
-          v-for="book in booksList"
-          :key="book.id"
-          :id="book.id"
-          :name="book.title"
-          :authors="book.authors"
-          :price="book.price"
-          :thumbnailUrl="book.thumbnail"
-          :status="book.status"
-        />
+    <div v-else class="contentWrapper">
+      <div class="booksWrapper">
+        <div class="booksGrid">
+          <BookCard
+            v-for="book in booksList"
+            :key="book.id"
+            :id="book.id"
+            :name="book.title"
+            :authors="book.authors"
+            :price="book.price"
+            :thumbnailUrl="book.thumbnail"
+            :status="book.status"
+          />
+        </div>
       </div>
     </div>
   </div>

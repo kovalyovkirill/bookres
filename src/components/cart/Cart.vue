@@ -1,7 +1,9 @@
 <template>
-  <div class="contentWrapper">
-    <CartList/>
-    <CartForm/>
+  <div class="cartListWrapper">
+    <div class="contentWrapper">
+      <CartList/>
+      <CartForm/>
+    </div>
   </div>
 </template>
 
