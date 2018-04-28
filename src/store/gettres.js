@@ -22,4 +22,6 @@ export default {
       return total
     }, 0)
   },
+  getPurchasePending: state => state.isPurchasePending,
+  getResultPurchase: state => state.resultPurchase,
 }

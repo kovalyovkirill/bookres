@@ -24,17 +24,16 @@
         <div class="error bottom">{{ errorData.email }}</div>
       </div>
       <div class="submitWr">
-        <button :class="{ disabled: isFormInvalid }">Оформить заказ</button>
+        <button :class="{ disabled: isFormInvalid || isPurchasePending }">Оформить заказ</button>
+        <span v-if="isPurchasePending">Отправляем заказ...</span>
+        <span v-if="resultText">{{ resultText }}</span>
       </div>
     </form>
-    <div class="resultMessage">
-
-    </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   data () {
@@ -52,7 +51,11 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({ totalPrice: 'getTotalPrice' }),
+    ...mapGetters({
+      totalPrice: 'getTotalPrice',
+      isPurchasePending: 'getPurchasePending',
+      resultText: 'getResultPurchase',
+    }),
     userNameInvalid () { return this.userName.trim().length < 3 },
     addressInvalid () { return this.address.trim().length < 10 },
     emailInvalid () { return (this.email, (this.email.trim().length < 4 || !this.$refs.email.validity.valid)) },
@@ -68,11 +71,12 @@ export default {
     },
   },
   methods: {
+    ...mapActions([ 'sendPurchase' ]),
     handlePurchase () {
       if (this.isFormInvalid) return
       const { userName, address, email, phone } = this
 
-      console.log(userName, address, email, phone)//eslint-disable-line
+      this.sendPurchase({ userName, address, email, phone })
     },
     checkError (event) {
       const id = event.currentTarget.id

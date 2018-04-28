@@ -14,9 +14,9 @@
       </div>
     </td>
     <td class="count">
-      <button @click="handleIncrease">+</button>
+      <button @click.stop="handleIncrease">+</button>
       <span>{{ count }}</span>
-      <button @click="handleDecreace" :disabled="isDecreaceDisabled">-</button>
+      <button @click.stop="handleDecreace" :disabled="isDecreaceDisabled">-</button>
     </td>
     <td class="price"><PriceFormat :value="price"/></td>
   </tr>

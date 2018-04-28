@@ -2,7 +2,7 @@
   <div class="bookItem">
     <div class="bookItemWr bookCard">
       <img :src="thumbnailUrl" alt="">
-      <div>Цена: <PriceFormat :value="price" /></div>
+      <div class="price">Цена: <PriceFormat :value="price" /></div>
       <div>Название: {{ name }}</div>
       <div>Авторы: {{ authorsList }}</div>
       <button :class="{ cart: !isMarket }" @click="handleClick">
@@ -37,7 +37,6 @@ export default {
   methods: {
     ...mapActions([ 'addToCart' ]),
     handleClick () {
-      console.log(this.id)//eslint-disable-line
       if (!this.isMarket) return
       this.addToCart({ id: this.id })
     },

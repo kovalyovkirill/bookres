@@ -34,4 +34,12 @@ export default {
       return book
     })
   },
+
+  sendPurchaseRequest (state) { state.isPurchasePending = true },
+  sendPurchaseSuccess (state) { state.isPurchasePending = false },
+  sendPurchaseFailure (state) { state.isPurchasePending = false },
+
+  setPurchaseResult (state, { message }) {
+    state.resultPurchase = message
+  },
 }

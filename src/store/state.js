@@ -3,4 +3,6 @@ export default {
   sortBy: 'id',
   checkedList: [],
   isBooksPending: true,
+  isPurchasePending: false,
+  resultPurchase: '',
 }

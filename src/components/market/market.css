@@ -35,6 +35,12 @@
   padding: 15px;
   position: relative;
 
+  .price {
+    font-weight: bolder;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+
   img {
     height: 180px;
     width: auto;
@@ -53,7 +59,7 @@
   button {
     padding: 10px 15px;
     background: transparent;
-    border: 2px solid #d3d3d3;
+    border: 1px solid #d3d3d3;
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;

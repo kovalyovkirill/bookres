@@ -73,6 +73,24 @@
   .count {
     text-align: center;
     vertical-align: middle;
+
+    button {
+      height: 30px;
+      width: 30px;
+      background-color: transparent;
+      border: 1px solid color($mainBg blend(black 8%));
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:disabled {
+        cursor: default;
+        opacity: 0.5;
+      }
+
+      &:hover {
+        background-color: color($mainBg blend(white 70%));
+      }
+    }
   }
 
   .totalPrice,
@@ -143,6 +161,7 @@
       button {
         padding: 15px 30px;
         margin-top: 20px;
+        margin-right: 10px;
         font-size: 16px;
         line-height: 20px;
         color: white;
