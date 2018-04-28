@@ -1,5 +1,10 @@
 @import url('vars.scss');
 
+.emptyMessage {
+  font-size: 20px;
+  color: color($textColor alpha(60%))
+}
+
 .cartList {
   border-collapse: collapse;
   border: 1px solid color($mainBg blend(black 8%));
@@ -19,7 +24,7 @@
   tbody {
     tr {
       cursor: pointer;
-      
+
       td {
         padding: 10px;
         vertical-align: top;
@@ -82,14 +87,84 @@
   }
 }
 
-.purchaseForm {
+.formWr {
+  margin-top: 40px;
+  .purchaseForm {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
 
-  .formField {
-    margin: 15px 0;
+    .formField {
+      width: 50%;
+      position: relative;
 
-    label {
-      display: inline-block;
-      min-width: 100px;
+      input {
+        width: calc(100% - 80px);
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-bottom: 40px;
+        border-radius: 2px;
+        border: 1px solid color($mainBg blend(black 8%));
+        outline: none;
+
+        &:focus {
+          border: 1px solid color($secondaryButton blend(white 40%))
+        }
+
+        &.inputError {
+          border: 1px solid $error;
+        }
+      }
+
+      label {
+        display: block;
+        min-width: 100px;
+        margin-bottom: 5px;
+      }
+
+      .error {
+        position: absolute;
+        font-size: 13px;
+        color: $error;
+
+        &.top {
+          top: 65px;
+        }
+
+        &.bottom {
+          bottom: 15px;
+        }
+      }
+    }
+
+    .submitWr {
+      width: 100%;
+
+      button {
+        padding: 15px 30px;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: white;
+        border-radius: 4px;
+        border: none;
+        background: $baseButton;
+        transition: background-color 0.15s ease;
+        cursor: pointer;
+
+        &.disabled {
+          opacity: .5;
+          cursor: default;
+
+          &:hover {
+            background-color: $baseButton;
+          }
+        }
+
+        &:hover {
+          background-color: color($baseButton blend($textColor 10%));
+        }
+      }
     }
   }
 }

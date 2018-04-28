@@ -1,5 +1,5 @@
 <template>
-  <div v-if="cartCount === 0">
+  <div class="emptyMessage" v-if="cartCount === 0">
     В корзине пока пусто
   </div>
   <table class="cartList" v-else>
