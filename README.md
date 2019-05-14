@@ -21,4 +21,3 @@ npm run unit
 # run all tests
 npm test
 ```
-App availiable on http://209.250.236.252:8080
